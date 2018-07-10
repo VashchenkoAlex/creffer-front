@@ -1,0 +1,41 @@
+<div class="login-container">
+  <div class="login-tabs">
+    <mat-tab-group mat-stretch-tabs>
+      <mat-tab label="Login">
+        <div class="tab-block">
+          <h2>Login with user details</h2>
+          <div class="login-form">
+            <form name="loginForm" [formGroup]="loginForm" (ngSubmit) = "sendLoginForm">
+              <div class="form-input-holder">
+                <label for="email">Email:</label>
+              <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email" type="email" id="email" required>
+              </mat-form-field>
+              </div>
+              <div class="form-input-holder">
+                <label for="password">Password:</label>
+              <mat-form-field>
+                <input matInput placeholder="Password" formControlName="password" type="password" id="password" required>
+              </mat-form-field>
+              </div>
+              <div class="form-actions">
+              <button mat-raised-button
+                      type="submit"
+                      class="reset-login-button" (click)="resetLoginForm">Reset Fields</button>
+              <button mat-raised-button
+                      color="primary"
+                      type="submit"
+                      class="send-login-button" (click)="sendLoginForm()">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Registration">
+        <div class="tab-block">
+          <h2>Create new account</h2>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
