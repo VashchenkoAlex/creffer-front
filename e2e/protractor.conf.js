@@ -12,7 +12,8 @@ exports.config = {
     'browserName': 'chrome'
   },
   directConnect: true,
-  baseUrl: 'https://dashboard.heroku.com/',
+  baseUrl: 'https://creffer-front.heroku.com/',
+  //baseUrl: 'https://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
